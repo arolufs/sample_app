@@ -1,2 +1,8 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function textCounter(field,cntfield,maxlimit) {
+// if too long...trim it!
+if (field.value.length > maxlimit) 
+	field.value = field.value.substring(0, maxlimit);
+// otherwise, update 'characters left' counter
+else
+	cntfield.innerHTML = maxlimit - field.value.length;
+}
